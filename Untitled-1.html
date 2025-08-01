@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brightstar Commercial Agencies & Land Surveyors</title>
+  <style>
+    :root {
+      --primary-color: #2e7d32; /* dark green */
+      --accent-color: #66bb6a; /* lighter green */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      background-color: var(--accent-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #4caf50;
+    }
+
+    main.container {
+      flex: 1;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+    }
+
+    #services ul {
+      list-style: square;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    #units {
+      margin-top: 40px;
+    }
+
+    .unit {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #f0fff0;
+    }
+
+    .unit h3 {
+      margin: 0 0 10px;
+      color: #006400;
+    }
+
+    .unit p {
+      margin: 5px 0;
+    }
+
+    .sold {
+      color: red;
+      font-weight: bold;
+    }
+
+    .available {
+      color: green;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #006400;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 0.9em;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Brightstar Commercial Agencies & Land Surveyors</h1>
+    <p>Reliable Land Services for a Growing Nation</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#units">Available Units</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Land Subdivision</li>
+        <li>Land Amalgamation</li>
+        <li>Boundary Identification</li>
+        <li>Cadastral Survey</li>
+        <li>Area Determination</li>
+        <li>Sectional Property Survey</li>
+        <li>Land Transfers</li>
+        <li>Mapping and Spatial Analysis</li>
+        <li>Buying and Selling of Land</li>
+        <li>Land Search Assistance</li>
+        <li>Title Deed Processing</li>
+      </ul>
+    </section>
+
+    <!-- Units Section -->
+    <section id="units">
+      <h2>Available Land Units on Sale</h2>
+
+      <!-- Repeatable Units Start -->
+      <div class="unit">
+        <h3>Unit A - Mirera Mastima</h3>
+        <p><strong>Size:</strong> 50 x 100</p>
+        <p><strong>Price:</strong> Ksh 950,000</p>
+        <p class="available">Status: Available</p>
+        <p><strong>Size:</strong> 1 Acre</p>
+        <p><strong>Price:</strong> Ksh 4.5M</p>
+        <p class="available">Status: Still Available</p>
+        <p><strong>Size:</strong> 3 Acres</p>
+        <p><strong>Price:</strong> Ksh 12M</p>
+        <p class="available">Status: Available</p>
+        <h3>Mirera Oasis</h3>
+        <p><strong>Size:</strong> 50 x 100</p>
+        <p><strong>Price:</strong> Ksh 650,000</p>
+        <p class="available">Status: Available</p>
+        <h3> Mirera Rubiri</h3>
+        <p><strong>Size:</strong> 50 x 100</p>
+        <p><strong>Price:</strong> Ksh 550,000</p>
+        <p class="sold">Status: Sold</p>
+      </div>
+
+      <!-- Add your other units as shown -->
+      <div class="unit">
+        <h3>Unit B - Naivasha Longonot Town</h3>
+        <p><strong>Size:</strong> 50 x 100</p>
+        <p><strong>Price:</strong> Ksh 600,000</p>
+        <p><strong>Size:</strong> 5.5 Acres</p>
+        <p><strong>Price:</strong> 3M/Acre</p>
+        <p class="available">Status: Available</p>
+      </div>
+
+      <!-- More units... -->
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #e6f4e6; padding: 50px 20px;">
+      <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 32px; margin-bottom: 20px; color: #006400;">Contact Us</h2>
+        <p style="font-size: 18px;">
+          <strong>Phone:</strong>
+          <a href="tel:+254722392661,+254721767325" style="color: #2e8b57;">
+            +254 722 392 661 , +254721767325
+          </a>
+        </p>
+        <p style="font-size: 18px;">
+          <strong>Email:</strong>
+          <a href="mailto:brightstarcommercialagencies@gmail.com" style="color: #2e8b57;">
+            brightstarcommercialagencies@gmail.com
+          </a>
+        </p>
+        <p style="font-size: 18px;">
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/254722392661" target="_blank" style="color: #2e8b57;">
+            Chat on WhatsApp
+          </a>
+        </p>
+        <p style="margin-top: 30px; font-size: 18px;">
+          <strong>Physical Address:</strong><br>
+          Brightstar Commercial Agencies & Land Surveyors,<br>
+          Naivasha Town, Mama Ngina Street opposite Manera Hardware, Kenya
+        </p>
+        <p style="font-size: 18px;">
+          <strong>Open Hours:</strong> Mon–Fri: 8:00am – 5:00pm
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Footer -->
+  <footer>
+    <p>&copy; 2025 Brightstar Commercial Agencies & Land Surveyors. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#services">Services</a> |
+      <a href="#units">Units</a> |
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
