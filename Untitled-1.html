@@ -8,8 +8,8 @@
     :root {
       --primary-color: #2e7d32;
       --accent-color: #66bb6a;
-      --background: #f9f9f9;
-      --footer-bg: #006400;
+      --background: rgba(255, 255, 255, 0.85);
+      --footer-bg: #004d00;
     }
 
     * {
@@ -21,13 +21,14 @@
     html, body {
       height: 100%;
       font-family: Arial, sans-serif;
-      background: var(--background);
       color: #333;
     }
 
     body {
       display: flex;
       flex-direction: column;
+      background: url("images/background.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
@@ -35,12 +36,30 @@
       color: white;
       padding: 40px 20px;
       text-align: center;
+      background-color: rgba(0, 100, 0, 0.85);
     }
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
+.logo {
+  height: 20px; /* Adjust as needed */
+  width: auto;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
 
     nav {
       background-color: var(--accent-color);
@@ -65,6 +84,9 @@
       padding: 20px;
       max-width: 1200px;
       margin: auto;
+      background-color: var(--background);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     section {
@@ -112,6 +134,7 @@
       background-color: #e6f4e6;
       padding: 50px 20px;
       text-align: center;
+      border-radius: 8px;
     }
 
     #contact p {
@@ -144,12 +167,45 @@
     .footer-links a:hover {
       text-decoration: underline;
     }
+    .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 100, 0, 0.2);
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.fade {
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
   </style>
 </head>
 <body>
   <header>
+     <div class="header-content">
+      <img src="images/logo.jpeg">
+      <div class="title-text">
     <h1>Brightstar Commercial Agencies & Land Surveyors</h1>
     <p>Reliable Land Services for a Growing Nation</p>
+        </div>
+    </div>
   </header>
 
   <nav>
@@ -160,8 +216,21 @@
   </nav>
 
   <main>
+    <!-- SERVICES SECTION -->
     <section id="services">
       <h2>Our Services</h2>
+      <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="images/service1.jpg"/>
+  </div>
+  <div class="slide fade">
+    <img src="images/service2.jpeg"/>
+  </div>
+  <div class="slide fade">
+    <img src="images/service3.jpg"/>
+  </div>
+</div>
+
       <ul>
         <li>Land Subdivision</li>
         <li>Land Amalgamation</li>
@@ -177,6 +246,7 @@
       </ul>
     </section>
 
+    <!-- AVAILABLE UNITS SECTION -->
     <section id="units">
       <h2>Available Land Units on Sale</h2>
       <div class="unit">
@@ -213,13 +283,13 @@
       <div class="unit"><h3>Unit L - Nyamathi</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 600,000</p><p class="available">Status: Few Available</p></div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section id="contact">
       <h2>Contact Us</h2>
       <p><strong>Phone:</strong> <a href="tel:+254722392661,+254721767325">+254 722 392 661 , +254721767325</a></p>
       <p><strong>Email:</strong> <a href="mailto:brightstarcommercialagencies@gmail.com">brightstarcommercialagencies@gmail.com</a></p>
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/254722392661" target="_blank">Chat on WhatsApp</a></p>
-      <p><strong>Physical Address:</strong><br>Brightstar Commercial Agencies & Land Surveyors,<br>Naivasha Town, Mama Ngina Street opposite Manera Hardware, Kenya</p>
-      <p><strong>Open Hours:</strong> Mon–Fri: 8:00am – 5:00pm</p>
+      <p><strong>Address:</strong><br>Naivasha Town, Mama Ngina Street opposite Manera Hardware</p>
     </section>
   </main>
 
@@ -231,5 +301,22 @@
       <a href="#contact">Contact</a>
     </div>
   </footer>
+  <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change slide every 4 seconds
+}
+</script>
 </body>
 </html>
