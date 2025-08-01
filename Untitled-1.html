@@ -6,8 +6,10 @@
   <title>Brightstar Commercial Agencies & Land Surveyors</title>
   <style>
     :root {
-      --primary-color: #2e7d32; /* dark green */
-      --accent-color: #66bb6a; /* lighter green */
+      --primary-color: #2e7d32;
+      --accent-color: #66bb6a;
+      --background: #f9f9f9;
+      --footer-bg: #006400;
     }
 
     * {
@@ -19,13 +21,13 @@
     html, body {
       height: 100%;
       font-family: Arial, sans-serif;
+      background: var(--background);
+      color: #333;
     }
 
     body {
       display: flex;
       flex-direction: column;
-      background: #f9f9f9;
-      color: #333;
     }
 
     header {
@@ -58,11 +60,11 @@
       background-color: #4caf50;
     }
 
-    main.container {
+    main {
       flex: 1;
+      padding: 20px;
       max-width: 1200px;
       margin: auto;
-      padding: 20px;
     }
 
     section {
@@ -77,10 +79,6 @@
       list-style: square;
       padding-left: 20px;
       line-height: 1.8;
-    }
-
-    #units {
-      margin-top: 40px;
     }
 
     .unit {
@@ -110,15 +108,30 @@
       font-weight: bold;
     }
 
+    #contact {
+      background-color: #e6f4e6;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #contact p {
+      font-size: 18px;
+    }
+
+    #contact a {
+      color: #2e8b57;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      background-color: #006400;
+      background-color: var(--footer-bg);
       color: white;
       text-align: center;
       padding: 20px 10px;
-    }
-
-    .footer-links {
-      margin-top: 10px;
     }
 
     .footer-links a {
@@ -134,7 +147,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Brightstar Commercial Agencies & Land Surveyors</h1>
     <p>Reliable Land Services for a Growing Nation</p>
@@ -147,9 +159,7 @@
     <a href="#location">Location</a>
   </nav>
 
-  <main class="container">
-
-    <!-- Services Section -->
+  <main>
     <section id="services">
       <h2>Our Services</h2>
       <ul>
@@ -167,11 +177,8 @@
       </ul>
     </section>
 
-    <!-- Units Section -->
     <section id="units">
       <h2>Available Land Units on Sale</h2>
-
-      <!-- Repeatable Units Start -->
       <div class="unit">
         <h3>Unit A - Mirera Mastima</h3>
         <p><strong>Size:</strong> 50 x 100</p>
@@ -187,62 +194,35 @@
         <p><strong>Size:</strong> 50 x 100</p>
         <p><strong>Price:</strong> Ksh 650,000</p>
         <p class="available">Status: Available</p>
-        <h3> Mirera Rubiri</h3>
+        <h3>Mirera Rubiri</h3>
         <p><strong>Size:</strong> 50 x 100</p>
         <p><strong>Price:</strong> Ksh 550,000</p>
         <p class="sold">Status: Sold</p>
       </div>
 
-      <!-- Add your other units as shown -->
-      <div class="unit">
-        <h3>Unit B - Naivasha Longonot Town</h3>
-        <p><strong>Size:</strong> 50 x 100</p>
-        <p><strong>Price:</strong> Ksh 600,000</p>
-        <p><strong>Size:</strong> 5.5 Acres</p>
-        <p><strong>Price:</strong> 3M/Acre</p>
-        <p class="available">Status: Available</p>
-      </div>
-
-      <!-- More units... -->
-
+      <div class="unit"><h3>Unit B - Naivasha Longonot Town</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 600,000</p><p><strong>Size:</strong> 5.5 Acres</p><p><strong>Price:</strong> 3M/Acre</p><p class="available">Status: Available</p></div>
+      <div class="unit"><h3>Unit C - Naivasha MaiMahiu Town</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 12M</p><p class="available">Status: Few Available</p></div>
+      <div class="unit"><h3>Unit D - Naivasha NGODI</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 250,000</p><p class="available">Status: Few Available</p></div>
+      <div class="unit"><h3>Unit E - Naivasha Kedong</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 500,000</p><p class="available">Status: Two units left</p></div>
+      <div class="unit"><h3>Unit F - Naivasha Unity</h3><p><strong>Size:</strong> 1 Acre</p><p><strong>Price:</strong> Ksh 7.5M</p><p class="available">Status: Available</p></div>
+      <div class="unit"><h3>Unit G - Naivasha Moindabi</h3><p><strong>Size:</strong> 5 Acre</p><p><strong>Price:</strong> Ksh 2M/Acre</p><p class="available">Status: Available</p></div>
+      <div class="unit"><h3>Unit H - Lake Front</h3><p><strong>Size:</strong> 5M</p><p><strong>Price:</strong> Ksh 20M/Acre</p><p class="available">Status: Available</p></div>
+      <div class="unit"><h3>Unit I - Naivasha Nyondia</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 1.2M</p><p class="available">Status: Few Available</p></div>
+      <div class="unit"><h3>Unit J - Naivasha Kinamba</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 1.35M</p><p class="available">Status: Few Units Available</p></div>
+      <div class="unit"><h3>Unit K - Villaview</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 5.5M</p><p class="available">Status: Few</p></div>
+      <div class="unit"><h3>Unit L - Nyamathi</h3><p><strong>Size:</strong> 50 x 100</p><p><strong>Price:</strong> Ksh 600,000</p><p class="available">Status: Few Available</p></div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" style="background-color: #e6f4e6; padding: 50px 20px;">
-      <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 32px; margin-bottom: 20px; color: #006400;">Contact Us</h2>
-        <p style="font-size: 18px;">
-          <strong>Phone:</strong>
-          <a href="tel:+254722392661,+254721767325" style="color: #2e8b57;">
-            +254 722 392 661 , +254721767325
-          </a>
-        </p>
-        <p style="font-size: 18px;">
-          <strong>Email:</strong>
-          <a href="mailto:brightstarcommercialagencies@gmail.com" style="color: #2e8b57;">
-            brightstarcommercialagencies@gmail.com
-          </a>
-        </p>
-        <p style="font-size: 18px;">
-          <strong>WhatsApp:</strong>
-          <a href="https://wa.me/254722392661" target="_blank" style="color: #2e8b57;">
-            Chat on WhatsApp
-          </a>
-        </p>
-        <p style="margin-top: 30px; font-size: 18px;">
-          <strong>Physical Address:</strong><br>
-          Brightstar Commercial Agencies & Land Surveyors,<br>
-          Naivasha Town, Mama Ngina Street opposite Manera Hardware, Kenya
-        </p>
-        <p style="font-size: 18px;">
-          <strong>Open Hours:</strong> Mon–Fri: 8:00am – 5:00pm
-        </p>
-      </div>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> <a href="tel:+254722392661,+254721767325">+254 722 392 661 , +254721767325</a></p>
+      <p><strong>Email:</strong> <a href="mailto:brightstarcommercialagencies@gmail.com">brightstarcommercialagencies@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/254722392661" target="_blank">Chat on WhatsApp</a></p>
+      <p><strong>Physical Address:</strong><br>Brightstar Commercial Agencies & Land Surveyors,<br>Naivasha Town, Mama Ngina Street opposite Manera Hardware, Kenya</p>
+      <p><strong>Open Hours:</strong> Mon–Fri: 8:00am – 5:00pm</p>
     </section>
-
   </main>
 
-  <!-- Sticky Footer -->
   <footer>
     <p>&copy; 2025 Brightstar Commercial Agencies & Land Surveyors. All rights reserved.</p>
     <div class="footer-links">
@@ -251,6 +231,5 @@
       <a href="#contact">Contact</a>
     </div>
   </footer>
-
 </body>
 </html>
